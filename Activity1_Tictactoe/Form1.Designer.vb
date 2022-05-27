@@ -40,7 +40,6 @@ Partial Class frmTicTacToe
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(112, 99)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "X"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -50,7 +49,6 @@ Partial Class frmTicTacToe
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(112, 99)
         Me.Button2.TabIndex = 1
-        Me.Button2.Text = "X"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
@@ -60,7 +58,6 @@ Partial Class frmTicTacToe
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(112, 99)
         Me.Button3.TabIndex = 2
-        Me.Button3.Text = "X"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
@@ -70,7 +67,6 @@ Partial Class frmTicTacToe
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(112, 99)
         Me.Button4.TabIndex = 3
-        Me.Button4.Text = "X"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button5
@@ -80,7 +76,6 @@ Partial Class frmTicTacToe
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(112, 99)
         Me.Button5.TabIndex = 4
-        Me.Button5.Text = "X"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button6
@@ -90,7 +85,6 @@ Partial Class frmTicTacToe
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(112, 99)
         Me.Button6.TabIndex = 5
-        Me.Button6.Text = "X"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'Button7
@@ -100,7 +94,6 @@ Partial Class frmTicTacToe
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(112, 99)
         Me.Button7.TabIndex = 6
-        Me.Button7.Text = "X"
         Me.Button7.UseVisualStyleBackColor = True
         '
         'Button8
@@ -110,7 +103,6 @@ Partial Class frmTicTacToe
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(112, 99)
         Me.Button8.TabIndex = 7
-        Me.Button8.Text = "X"
         Me.Button8.UseVisualStyleBackColor = True
         '
         'Button9
@@ -120,7 +112,6 @@ Partial Class frmTicTacToe
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(112, 99)
         Me.Button9.TabIndex = 8
-        Me.Button9.Text = "X"
         Me.Button9.UseVisualStyleBackColor = True
         '
         'frmTicTacToe
