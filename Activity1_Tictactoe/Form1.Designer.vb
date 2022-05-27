@@ -31,6 +31,8 @@ Partial Class frmTicTacToe
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnPlay = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -54,7 +56,7 @@ Partial Class frmTicTacToe
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Segoe UI", 50.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button3.Location = New System.Drawing.Point(457, 72)
+        Me.Button3.Location = New System.Drawing.Point(293, 88)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(112, 99)
         Me.Button3.TabIndex = 2
@@ -114,11 +116,32 @@ Partial Class frmTicTacToe
         Me.Button9.TabIndex = 8
         Me.Button9.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(124, 20)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(217, 54)
+        Me.Label1.TabIndex = 9
+        Me.Label1.Text = "TICTACTOE"
+        '
+        'btnPlay
+        '
+        Me.btnPlay.Location = New System.Drawing.Point(57, 412)
+        Me.btnPlay.Name = "btnPlay"
+        Me.btnPlay.Size = New System.Drawing.Size(112, 40)
+        Me.btnPlay.TabIndex = 10
+        Me.btnPlay.Text = "Play"
+        Me.btnPlay.UseVisualStyleBackColor = True
+        '
         'frmTicTacToe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(769, 488)
+        Me.Controls.Add(Me.btnPlay)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Button7)
@@ -131,6 +154,7 @@ Partial Class frmTicTacToe
         Me.Name = "frmTicTacToe"
         Me.Text = "TICTACTOE"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -143,4 +167,6 @@ Partial Class frmTicTacToe
     Friend WithEvents Button7 As Button
     Friend WithEvents Button8 As Button
     Friend WithEvents Button9 As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents btnPlay As Button
 End Class
