@@ -54,7 +54,7 @@ Partial Class frmTicTacToe
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Segoe UI", 50.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button3.Location = New System.Drawing.Point(361, 88)
+        Me.Button3.Location = New System.Drawing.Point(457, 72)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(112, 99)
         Me.Button3.TabIndex = 2
