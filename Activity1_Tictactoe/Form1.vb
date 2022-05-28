@@ -1,7 +1,7 @@
 ﻿Public Class frmTicTacToe
     Dim flag = 0
-    Dim turn = True
-    Dim count = 0
+    Dim player As Boolean = True
+    Dim turn As Integer = 0
 
     Private Sub frmTicTacToe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Initial()
@@ -57,69 +57,70 @@
         btn32.Text = ""
         btn33.Text = ""
 
-        turn = True
-        count = 0
+        turn = 0
+        btnPlay.Enabled = True
 
     End Sub
 
     Private Sub Checker()
-        'HORIZONTAL
-        Dim winner As Boolean
-        winner = False
+        Dim Winner As Boolean = False
 
-        If ((btn11.Text = btn12.Text) And (btn12.Text = btn13.Text) And (btn11.Enabled = False)) Then
-            winner = True
-        End If
-        If ((btn21.Text = btn22.Text) And (btn22.Text = btn23.Text) And (btn21.Enabled = False)) Then
-            winner = True
-        End If
-        If ((btn31.Text = btn32.Text) And (btn32.Text = btn33.Text) And (btn31.Enabled = False)) Then
-            winner = True
-        End If
+        'horizontal
+        If btn11.Text = btn21.Text And btn21.Text = btn31.Text And Not btn11.Enabled Then
+            Winner = True
 
-        'VERTICAL
-        If ((btn11.Text = btn21.Text) And (btn21.Text = btn31.Text) And (btn31.Enabled = False)) Then
-            winner = True
-        End If
+        ElseIf btn12.Text = btn22.Text And btn22.Text = btn32.Text And Not btn12.Enabled Then
+            Winner = True
 
-        If ((btn12.Text = btn22.Text) And (btn22.Text = btn32.Text) And (btn32.Enabled = False)) Then
-                winner = True
-            End If
-        If ((btn13.Text = btn23.Text) And (btn32.Text = btn33.Text) And (btn33.Enabled = False)) Then
-            winner = True
-        End If
+        ElseIf btn13.Text = btn23.Text And btn23.Text = btn33.Text And Not btn13.Enabled Then
+            Winner = True
 
-        'DIAGONAL
-        If ((btn11.Text = btn22.Text) And (btn22.Text = btn33.Text) And (btn33.Enabled = False)) Then
-            winner = True
-        End If
-        If ((btn13.Text = btn22.Text) And (btn22.Text = btn31.Text) And (btn31.Enabled = False)) Then
-            winner = True
+            'vertical
+        ElseIf btn11.Text = btn22.Text And btn22.Text = btn33.Text And Not btn11.Enabled Then
+            Winner = True
+
+        ElseIf btn13.Text = btn22.Text And btn22.Text = btn31.Text And Not btn13.Enabled Then
+            Winner = True
+
+        ElseIf btn11.Text = btn12.Text And btn12.Text = btn13.Text And Not btn11.Enabled Then
+            Winner = True
+
+            'diagonal
+        ElseIf btn21.Text = btn22.Text And btn22.Text = btn23.Text And Not btn21.Enabled Then
+            Winner = True
+
+        ElseIf btn31.Text = btn32.Text And btn31.Text = btn33.Text And Not btn31.Enabled Then
+            Winner = True
+
         End If
 
-        If (winner) Then
-            Dim player As String
-            player = ""
+        If Winner Then
+            forButton()
+            Dim wins As String = ""
 
-            If (turn) Then
-                player = "O"
+            If player Then
+                wins = "Player 0"
             Else
-                player = "X"
-                MessageBox.Show("Congratulations Player " + player + "! You won the game!")
+                wins = "Player X"
             End If
+
+            MessageBox.Show(wins + ", you win! Congratulations!")
+            Reset()
         Else
-            If (count = 9) Then
-                MessageBox.Show("It's a draw!", "Result")
+            If turn = 9 Then
+                MessageBox.Show("Game is Draw!")
             End If
+
         End If
+
     End Sub
 
     Private Sub btnPlay_Click(sender As Object, e As EventArgs) Handles btnPlay.Click
-        If flag = 0 = True Then
+        If flag = 0 Then
             flag = 1
             btnPlay.Text = "RESET"
             Reset()
-        ElseIf flag = 1 = True Then
+        ElseIf flag = 1 Then
             flag = 0
             btnPlay.Text = "PLAY"
             Reset()
@@ -127,27 +128,40 @@
 
     End Sub
 
-    Private Sub button_click(sender As Object, e As EventArgs) Handles btn33.Click, btn32.Click, btn31.Click, btn23.Click, btn22.Click, btn21.Click, btn13.Click, btn12.Click, btn11.Click
-        Dim b As Button = CType(sender, Button)
-        If (turn = True) Then
-            b.Text = "X"
-        Else
-            b.Text = "O"
-        End If
+    Private Sub forButton()
+        Dim ctrl As Control
+        Try
+            For Each ctrl In Controls
+                Dim x As Button = ctrl
+                x.Enabled = False
+            Next
+        Catch ex As Exception
 
-        turn = Not (turn)
-        count += 1
-        b.BackColor = Color.Khaki
-        b.Enabled = False
-        Checker()
+        End Try
 
+    End Sub
+
+
+    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+        Application.Exit()
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
     End Sub
 
-    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
-        Application.Exit()
+    Private Sub btn33_Click(sender As Object, e As EventArgs) Handles btn33.Click, btn32.Click, btn31.Click, btn23.Click, btn22.Click, btn21.Click, btn13.Click, btn12.Click, btn11.Click
+        Dim b As Button = sender
+        If player Then
+            b.Text = "X"
+        Else
+            b.Text = "O"
+        End If
+
+        player = Not player
+        b.BackColor = Color.Khaki
+        b.Enabled = False
+        turn += 1
+        Checker()
     End Sub
 End Class
