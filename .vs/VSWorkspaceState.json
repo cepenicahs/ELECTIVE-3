@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Activity2_ContactTracing"
+    "\\Activity2_ContactTracingApp",
+    "\\Activity2_ContactTracingApp\\Activity2_ContactTracingApp"
   ],
-  "SelectedNode": "\\Activity2_ContactTracing",
+  "SelectedNode": "\\Activity2_ContactTracingApp\\Activity2_ContactTracingApp\\Form1.vb",
   "PreviewInSolutionExplorer": false
 }
