@@ -40,4 +40,20 @@ Public Class Form1
             MessageBox.Show("Failed to save!")
         End Try
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        TblContactsBindingSource.MovePrevious()
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        TblContactsBindingSource.MoveNext()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        TblContactsBindingSource.RemoveCurrent()
+    End Sub
 End Class

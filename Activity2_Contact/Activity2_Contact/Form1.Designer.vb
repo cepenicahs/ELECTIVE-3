@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim IDLabel As System.Windows.Forms.Label
@@ -63,11 +63,14 @@ Partial Class Form1
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         IDLabel = New System.Windows.Forms.Label()
         FirstNameLabel = New System.Windows.Forms.Label()
         LastNameLabel = New System.Windows.Forms.Label()
@@ -85,6 +88,107 @@ Partial Class Form1
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'IDLabel
+        '
+        IDLabel.AutoSize = True
+        IDLabel.Location = New System.Drawing.Point(35, 48)
+        IDLabel.Name = "IDLabel"
+        IDLabel.Size = New System.Drawing.Size(30, 20)
+        IDLabel.TabIndex = 1
+        IDLabel.Text = "ID:"
+        '
+        'FirstNameLabel
+        '
+        FirstNameLabel.AutoSize = True
+        FirstNameLabel.Location = New System.Drawing.Point(35, 80)
+        FirstNameLabel.Name = "FirstNameLabel"
+        FirstNameLabel.Size = New System.Drawing.Size(90, 20)
+        FirstNameLabel.TabIndex = 3
+        FirstNameLabel.Text = "First Name:"
+        '
+        'LastNameLabel
+        '
+        LastNameLabel.AutoSize = True
+        LastNameLabel.Location = New System.Drawing.Point(36, 115)
+        LastNameLabel.Name = "LastNameLabel"
+        LastNameLabel.Size = New System.Drawing.Size(94, 20)
+        LastNameLabel.TabIndex = 5
+        LastNameLabel.Text = "Last Name: "
+        '
+        'AddressLabel
+        '
+        AddressLabel.AutoSize = True
+        AddressLabel.Location = New System.Drawing.Point(36, 151)
+        AddressLabel.Name = "AddressLabel"
+        AddressLabel.Size = New System.Drawing.Size(101, 20)
+        AddressLabel.TabIndex = 7
+        AddressLabel.Text = "Full Address:"
+        '
+        'ContactNumberLabel
+        '
+        ContactNumberLabel.AutoSize = True
+        ContactNumberLabel.Location = New System.Drawing.Point(452, 61)
+        ContactNumberLabel.Name = "ContactNumberLabel"
+        ContactNumberLabel.Size = New System.Drawing.Size(129, 20)
+        ContactNumberLabel.TabIndex = 9
+        ContactNumberLabel.Text = "Contact Number:"
+        '
+        'AgeLabel
+        '
+        AgeLabel.AutoSize = True
+        AgeLabel.Location = New System.Drawing.Point(536, 107)
+        AgeLabel.Name = "AgeLabel"
+        AgeLabel.Size = New System.Drawing.Size(42, 20)
+        AgeLabel.TabIndex = 11
+        AgeLabel.Text = "Age:"
+        AddHandler AgeLabel.Click, AddressOf Me.AgeLabel_Click
+        '
+        'FeverLabel
+        '
+        FeverLabel.AutoSize = True
+        FeverLabel.Location = New System.Drawing.Point(44, 44)
+        FeverLabel.Name = "FeverLabel"
+        FeverLabel.Size = New System.Drawing.Size(53, 20)
+        FeverLabel.TabIndex = 13
+        FeverLabel.Text = "Fever:"
+        '
+        'CoughLabel
+        '
+        CoughLabel.AutoSize = True
+        CoughLabel.Location = New System.Drawing.Point(44, 76)
+        CoughLabel.Name = "CoughLabel"
+        CoughLabel.Size = New System.Drawing.Size(60, 20)
+        CoughLabel.TabIndex = 15
+        CoughLabel.Text = "Cough:"
+        '
+        'Loss_of_tasteLabel
+        '
+        Loss_of_tasteLabel.AutoSize = True
+        Loss_of_tasteLabel.Location = New System.Drawing.Point(44, 108)
+        Loss_of_tasteLabel.Name = "Loss_of_tasteLabel"
+        Loss_of_tasteLabel.Size = New System.Drawing.Size(163, 20)
+        Loss_of_tasteLabel.TabIndex = 17
+        Loss_of_tasteLabel.Text = "Loss of taste or smell:"
+        '
+        'Sore_throatLabel
+        '
+        Sore_throatLabel.AutoSize = True
+        Sore_throatLabel.Location = New System.Drawing.Point(44, 140)
+        Sore_throatLabel.Name = "Sore_throatLabel"
+        Sore_throatLabel.Size = New System.Drawing.Size(93, 20)
+        Sore_throatLabel.TabIndex = 19
+        Sore_throatLabel.Text = "Sore throat:"
+        '
+        'ContactLabel
+        '
+        ContactLabel.AutoSize = True
+        ContactLabel.Location = New System.Drawing.Point(6, 177)
+        ContactLabel.Name = "ContactLabel"
+        ContactLabel.Size = New System.Drawing.Size(714, 20)
+        ContactLabel.TabIndex = 21
+        ContactLabel.Text = "Did you have contact with an asymptomatic or COVID-19 positive person for the pas" &
+    "t two (2) weeks?"
         '
         'ContactDataSet
         '
@@ -106,15 +210,6 @@ Partial Class Form1
         Me.TableAdapterManager.tblContactsTableAdapter = Me.TblContactsTableAdapter
         Me.TableAdapterManager.UpdateOrder = Activity2_Contact.contactDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'IDLabel
-        '
-        IDLabel.AutoSize = True
-        IDLabel.Location = New System.Drawing.Point(35, 48)
-        IDLabel.Name = "IDLabel"
-        IDLabel.Size = New System.Drawing.Size(30, 20)
-        IDLabel.TabIndex = 1
-        IDLabel.Text = "ID:"
-        '
         'IDTextBox
         '
         Me.IDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblContactsBindingSource, "ID", True))
@@ -122,15 +217,6 @@ Partial Class Form1
         Me.IDTextBox.Name = "IDTextBox"
         Me.IDTextBox.Size = New System.Drawing.Size(67, 26)
         Me.IDTextBox.TabIndex = 2
-        '
-        'FirstNameLabel
-        '
-        FirstNameLabel.AutoSize = True
-        FirstNameLabel.Location = New System.Drawing.Point(35, 80)
-        FirstNameLabel.Name = "FirstNameLabel"
-        FirstNameLabel.Size = New System.Drawing.Size(90, 20)
-        FirstNameLabel.TabIndex = 3
-        FirstNameLabel.Text = "First Name:"
         '
         'FirstNameTextBox
         '
@@ -140,15 +226,6 @@ Partial Class Form1
         Me.FirstNameTextBox.Size = New System.Drawing.Size(246, 26)
         Me.FirstNameTextBox.TabIndex = 4
         '
-        'LastNameLabel
-        '
-        LastNameLabel.AutoSize = True
-        LastNameLabel.Location = New System.Drawing.Point(36, 115)
-        LastNameLabel.Name = "LastNameLabel"
-        LastNameLabel.Size = New System.Drawing.Size(94, 20)
-        LastNameLabel.TabIndex = 5
-        LastNameLabel.Text = "Last Name: "
-        '
         'LastNameTextBox
         '
         Me.LastNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblContactsBindingSource, "lastName", True))
@@ -156,15 +233,6 @@ Partial Class Form1
         Me.LastNameTextBox.Name = "LastNameTextBox"
         Me.LastNameTextBox.Size = New System.Drawing.Size(245, 26)
         Me.LastNameTextBox.TabIndex = 6
-        '
-        'AddressLabel
-        '
-        AddressLabel.AutoSize = True
-        AddressLabel.Location = New System.Drawing.Point(36, 151)
-        AddressLabel.Name = "AddressLabel"
-        AddressLabel.Size = New System.Drawing.Size(101, 20)
-        AddressLabel.TabIndex = 7
-        AddressLabel.Text = "Full Address:"
         '
         'AddressTextBox
         '
@@ -175,15 +243,6 @@ Partial Class Form1
         Me.AddressTextBox.Size = New System.Drawing.Size(245, 69)
         Me.AddressTextBox.TabIndex = 8
         '
-        'ContactNumberLabel
-        '
-        ContactNumberLabel.AutoSize = True
-        ContactNumberLabel.Location = New System.Drawing.Point(452, 61)
-        ContactNumberLabel.Name = "ContactNumberLabel"
-        ContactNumberLabel.Size = New System.Drawing.Size(129, 20)
-        ContactNumberLabel.TabIndex = 9
-        ContactNumberLabel.Text = "Contact Number:"
-        '
         'ContactNumberTextBox
         '
         Me.ContactNumberTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblContactsBindingSource, "contactNumber", True))
@@ -191,16 +250,6 @@ Partial Class Form1
         Me.ContactNumberTextBox.Name = "ContactNumberTextBox"
         Me.ContactNumberTextBox.Size = New System.Drawing.Size(130, 26)
         Me.ContactNumberTextBox.TabIndex = 10
-        '
-        'AgeLabel
-        '
-        AgeLabel.AutoSize = True
-        AgeLabel.Location = New System.Drawing.Point(536, 107)
-        AgeLabel.Name = "AgeLabel"
-        AgeLabel.Size = New System.Drawing.Size(42, 20)
-        AgeLabel.TabIndex = 11
-        AgeLabel.Text = "Age:"
-        AddHandler AgeLabel.Click, AddressOf Me.AgeLabel_Click
         '
         'AgeTextBox
         '
@@ -210,15 +259,6 @@ Partial Class Form1
         Me.AgeTextBox.Size = New System.Drawing.Size(100, 26)
         Me.AgeTextBox.TabIndex = 12
         '
-        'FeverLabel
-        '
-        FeverLabel.AutoSize = True
-        FeverLabel.Location = New System.Drawing.Point(44, 44)
-        FeverLabel.Name = "FeverLabel"
-        FeverLabel.Size = New System.Drawing.Size(53, 20)
-        FeverLabel.TabIndex = 13
-        FeverLabel.Text = "Fever:"
-        '
         'FeverTextBox
         '
         Me.FeverTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblContactsBindingSource, "fever", True))
@@ -226,15 +266,6 @@ Partial Class Form1
         Me.FeverTextBox.Name = "FeverTextBox"
         Me.FeverTextBox.Size = New System.Drawing.Size(100, 26)
         Me.FeverTextBox.TabIndex = 14
-        '
-        'CoughLabel
-        '
-        CoughLabel.AutoSize = True
-        CoughLabel.Location = New System.Drawing.Point(44, 76)
-        CoughLabel.Name = "CoughLabel"
-        CoughLabel.Size = New System.Drawing.Size(60, 20)
-        CoughLabel.TabIndex = 15
-        CoughLabel.Text = "Cough:"
         '
         'CoughTextBox
         '
@@ -244,15 +275,6 @@ Partial Class Form1
         Me.CoughTextBox.Size = New System.Drawing.Size(100, 26)
         Me.CoughTextBox.TabIndex = 16
         '
-        'Loss_of_tasteLabel
-        '
-        Loss_of_tasteLabel.AutoSize = True
-        Loss_of_tasteLabel.Location = New System.Drawing.Point(44, 108)
-        Loss_of_tasteLabel.Name = "Loss_of_tasteLabel"
-        Loss_of_tasteLabel.Size = New System.Drawing.Size(163, 20)
-        Loss_of_tasteLabel.TabIndex = 17
-        Loss_of_tasteLabel.Text = "Loss of taste or smell:"
-        '
         'Loss_of_tasteTextBox
         '
         Me.Loss_of_tasteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblContactsBindingSource, "loss_of_taste", True))
@@ -261,15 +283,6 @@ Partial Class Form1
         Me.Loss_of_tasteTextBox.Size = New System.Drawing.Size(100, 26)
         Me.Loss_of_tasteTextBox.TabIndex = 18
         '
-        'Sore_throatLabel
-        '
-        Sore_throatLabel.AutoSize = True
-        Sore_throatLabel.Location = New System.Drawing.Point(44, 140)
-        Sore_throatLabel.Name = "Sore_throatLabel"
-        Sore_throatLabel.Size = New System.Drawing.Size(93, 20)
-        Sore_throatLabel.TabIndex = 19
-        Sore_throatLabel.Text = "Sore throat:"
-        '
         'Sore_throatTextBox
         '
         Me.Sore_throatTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblContactsBindingSource, "sore_throat", True))
@@ -277,16 +290,6 @@ Partial Class Form1
         Me.Sore_throatTextBox.Name = "Sore_throatTextBox"
         Me.Sore_throatTextBox.Size = New System.Drawing.Size(100, 26)
         Me.Sore_throatTextBox.TabIndex = 20
-        '
-        'ContactLabel
-        '
-        ContactLabel.AutoSize = True
-        ContactLabel.Location = New System.Drawing.Point(6, 177)
-        ContactLabel.Name = "ContactLabel"
-        ContactLabel.Size = New System.Drawing.Size(714, 20)
-        ContactLabel.TabIndex = 21
-        ContactLabel.Text = "Did you have contact with an asymptomatic or COVID-19 positive person for the pas" &
-    "t two (2) weeks?"
         '
         'ContactTextBox
         '
@@ -400,6 +403,7 @@ Partial Class Form1
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.SkyBlue
+        Me.GroupBox2.Controls.Add(Me.Button6)
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Controls.Add(Me.FeverTextBox)
@@ -420,6 +424,34 @@ Partial Class Form1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Have you experienced any of the following COVID-19 Symptoms for the past two (2) " &
     "weeks?"
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.SteelBlue
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(538, 259)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(108, 46)
+        Me.Button2.TabIndex = 24
+        Me.Button2.Text = "Submit"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.SteelBlue
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(424, 259)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(108, 46)
+        Me.Button1.TabIndex = 23
+        Me.Button1.Text = "Add New"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -451,41 +483,59 @@ Partial Class Form1
         Me.Label3.TabIndex = 28
         Me.Label3.Text = "Contact Tracing Application"
         '
-        'Button1
+        'Button3
         '
-        Me.Button1.BackColor = System.Drawing.Color.SteelBlue
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(527, 259)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(108, 46)
-        Me.Button1.TabIndex = 23
-        Me.Button1.Text = "Add New"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Button3.BackColor = System.Drawing.Color.SteelBlue
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(574, 952)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(108, 46)
+        Me.Button3.TabIndex = 25
+        Me.Button3.Text = "Previous"
+        Me.Button3.UseVisualStyleBackColor = False
         '
-        'Button2
+        'Button4
         '
-        Me.Button2.BackColor = System.Drawing.Color.SteelBlue
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(641, 259)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(108, 46)
-        Me.Button2.TabIndex = 24
-        Me.Button2.Text = "Submit"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.Button4.BackColor = System.Drawing.Color.SteelBlue
+        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.Color.White
+        Me.Button4.Location = New System.Drawing.Point(688, 952)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(108, 46)
+        Me.Button4.TabIndex = 26
+        Me.Button4.Text = "Next"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.Color.SteelBlue
+        Me.Button6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.ForeColor = System.Drawing.Color.White
+        Me.Button6.Location = New System.Drawing.Point(652, 259)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(108, 46)
+        Me.Button6.TabIndex = 26
+        Me.Button6.Text = "Delete"
+        Me.Button6.UseVisualStyleBackColor = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Azure
-        Me.ClientSize = New System.Drawing.Size(832, 951)
+        Me.ClientSize = New System.Drawing.Size(832, 1017)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox2)
@@ -540,4 +590,7 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button6 As Button
 End Class
