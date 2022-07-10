@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Activity4_QRCodeScanner",
+    "\\Activity4_QRCodeScanner\\Activity4_QRCodeScanner"
   ],
+  "SelectedNode": "\\Activity4_QRCodeScanner\\Activity4_QRCodeScanner\\Form1.vb",
   "PreviewInSolutionExplorer": false
 }
